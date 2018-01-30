@@ -1,0 +1,478 @@
+﻿body {
+}
+input, label {
+    font-family: 'Roboto',sans-serif;
+    font-size: 13px;
+}
+.form-popup {
+    position: absolute;
+  
+    left: 50%;
+    z-index: 91;
+    
+    
+}
+.form-popup.form-nouser {
+    width: 550px;
+    margin-left: -275px;
+}
+.form-popup .form-main {
+    padding-top: 10px;
+}
+ .form-popup.form-nouser .form {
+    width: 360px;
+    margin: 0 auto;
+}
+
+.form-popup.form-register .form {
+    width: 100%;
+}
+.form-popup .form-main .form .row {
+    padding-bottom: 20px;
+    position: relative;
+}
+.form-popup.form-register .form .row {
+    width: 100%;
+    display: table;
+    padding-bottom: 8px;
+}
+ 
+
+.form-popup .form-main .form .row {
+    padding-bottom: 10px;
+}
+.send-code {
+    width: 145px;
+    height: 34px;
+    margin-top: 5px;
+    float: left;
+}
+
+.captcha_refresh {
+    background: url(../images/asset_new.png) no-repeat -209px -38px;
+    width: 49px;
+    height: 41px;
+    position: absolute;
+    margin-left: 38px; 
+
+}
+
+.form-popup.form-register .form .row.referral .input {
+    width: 160px;
+}
+.form-popup.form-register .form .row > .input {
+    width: 305px;
+    float: left;
+}
+.form-popup.form-register .form .row.referral .label {
+    width: 163px;
+}
+.form-popup .form-main .form .row > .input input, .form-popup .form-main .form .row > .input select {
+    height: 45px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #343434;
+    border: none;
+    padding: 0 10px 0 20px;
+}
+.form-popup .form-main .form .row > .input input, .form-popup .form-main .form .row > .input select {
+    height: 45px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #343434;
+    border: none;
+    padding: 0 10px 0 20px;
+}
+.form-popup .form-main .form .row > .input input.input-1, .form-popup .form-main .form .row > .input select.input-1 {
+    width: 62px;
+    float: left;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+ 
+.form-popup .form-main .form .row > .label .require {
+    color: #ffc104;
+}
+ 
+ .form-popup .promotion .model {
+    height: 562px;
+    width: 250px;
+    background: url(../images/model-register.png) no-repeat;
+    position: absolute;
+    top: 50%;
+    left: -205px;
+    margin-top: -255px;
+}
+ .form-popup .form-main .form .row > .label {
+    color: #d7cace;
+    font-size: 17px;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+ .form-popup.form-register .form .row > .label {
+    float: left;
+    width: 163px;
+    font-size: 17px;
+    font-weight: 400;
+    padding-top: 14px;
+}
+ .form-popup .form-main .form .label {
+    text-align: left;
+}
+.form-popup.form-register .form-main .form .label {
+    text-align: right;
+}
+.form-popup .form-main .form .more {
+    float: right;
+    padding-top: 12px;
+}
+.form-popup > .title {
+    background: url(../images/../misc.html) no-repeat no-repeat;
+    width: 274px;
+    height: 31px;
+    background-position: -176px -157px;
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    margin-left: -137px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #692f00;
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 2px;
+}
+.send-code .step {
+    width: 100%;
+    height: 34px;
+    position: relative;
+    padding-left: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffca12;
+}
+.send-code .step.step-1 .send-code-btn {
+    height: 34px;
+    width: 100%;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    border-radius: 7px;
+    line-height: 36px;
+    text-transform: uppercase;
+    background-color: #ffc54e;
+    background-image: -webkit-linear-gradient(top,#ffc54e,#f36f25);
+    background-image: linear-gradient(to bottom,#ffc54e,#f36f25);
+    text-shadow: 0 1px 1px rgba(204,90,10,0.53);
+    color: #fff;
+    font-size: .9em;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(224,123,61,0.5);
+}
+.form-popup .confirm {
+    color: #d7cace;
+    font-weight: 400;
+    font-size: 14px;
+    width: 100%;
+    display: table;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.radio, .checkbox {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.form-popup .checkbox {
+    display: inline-block;
+}
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 4px \9;
+}
+.form-popup .checkbox .style-checkbox {
+    height: 22px;
+    width: 22px;
+    border-radius: 5px;
+    background: #d7cace;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    top: 5px;
+    margin-right: 10px;
+}
+.form-popup .checkbox input:checked ~ label .style-checkbox {
+    background: #5cea06;
+}
+.form-popup .checkbox input {
+    display: none;
+}
+.form-popup .form-main .action {
+    padding-top: 8px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.form-popup .form-main .action .btn-submit {
+   background: -webkit-linear-gradient(top,#fff 0%,#ffe92b 26%,#ff8900 100%);
+    background: -o-linear-gradient(top,#fff 0%,#ffe92b 26%,#ff8900 100%);
+    background: -ms-linear-gradient(top,#fff 0%,#ffe92b 26%,#ff8900 100%);
+    background: linear-gradient(to bottom,#fff 0%,#ffe92b 26%,#ff8900 100%);
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    width: 148px;
+    height: 48px;
+    line-height: 36px;
+    cursor: pointer;
+    color: #4f2412;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 8px;
+    display: block;
+    float: left;
+    text-transform: uppercase;
+    margin: 0 10px;
+}
+.form-popup .form-main .action .btn-center {
+    float: none;
+    margin: 0 auto;
+}
+
+.form-popup .form-main .action .btn-submit:hover {
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+    -webkit-filter: brightness(120%);
+}
+.form-popup .alert {
+    background: #3c3333;
+    border-radius: 5px;
+    width: 100%;
+    padding: 8px  25px;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+}
+.form-popup .alert.warning {
+    color: #d02a2a;
+    background: rgba(2, 0, 0, 0.5);
+}
+.form-popup .divider {
+    background: rgba(255,255,255,0.1);
+    height: 1px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+ 
+.form-popup .tips {
+    padding: 7px 0;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+}
+.form-popup .tips.up {
+    color: #dd861f;
+    font-style: italic;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+
+
+.footer {
+    display: block;
+    height: 54px;
+    text-align: center;
+    line-height: 54px;
+    position: relative;
+    margin-top: -76px;
+
+}
+.portal .footer {
+    transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    margin-top: -80px;
+}
+
+.footer .container {
+    width: 1170px;
+    padding: 0;
+    margin: auto;
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(left, transparent 0%, #080920 40%, #080920 60%, transparent 100%);
+    background-image: linear-gradient(to right, transparent 0%, #080920 40%, #080920 60%, transparent 100%);
+}
+
+.footer li, .footer li a {
+    padding: 0 5px;
+    color: #fff
+}
+.footer li a:hover {
+    padding: 0 5px;
+    color: #ffdc52
+}
+
+.footer li, .footer li i {
+    display: inline-block;
+}
+.footer li i {
+    background: url(../images/asset_new.png) top left no-repeat;
+    position: relative;
+    top: 10px;
+    margin-right: 5px;
+    transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+}
+
+.footer i.notifi {
+    background-position: -4px -48px;
+    width: 23px;
+    height: 19px;
+    top: 4px;
+}
+
+.footer i.partner {
+    background-position: -42px -46px;
+    width: 24px;
+    height: 21px;
+    top: 4px;
+}
+
+.footer i.guide {
+    background-position: -77px -48px;
+    width: 24px;
+    height: 19px;
+    top: 4px;
+}
+
+.footer i.download {
+    background-position: -115px -46px;
+    width: 20px;
+    height: 19px;
+    top: 4px;
+}
+
+.footer i.fanpage {
+    background-position: -148px -46px;
+    width: 11px;
+    height: 20px;
+    top: 4px;
+}
+ .footer i.help {
+    background-position: -171px -42px;
+    width: 23px;
+    height: 23px;
+    top: 4px;
+}
+ 
+ 
+.giftcodebox {
+    position: absolute;
+        left: -120px;
+    top: 120px;
+}
+
+.giftcodebox #giftcode {
+    background: url(../images/giftcode.png) top left no-repeat;
+    position: absolute;
+    transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    width: 88px;
+    height: 88px;
+}
+
+.giftcodebox #doanloadapp {
+    background: url(../images/downloadapp.png) top left no-repeat;
+    position: absolute;
+    transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    width: 88px;
+    height: 88px;
+    top: 91px;
+}
+
+.appcontainer {
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+    background: linear-gradient(to bottom, #0d0d2f, #373767);
+    border-radius: 20px;
+}
+
+.appcontainer .iconapp {
+    background: url(../images/iconapp.png) no-repeat;
+    width: 228px;
+    height: 228px;
+    background-size: 125px;
+    position: absolute;
+    top: 85px;
+    left: 56px;
+}
+.appcontainer .android {
+    position: absolute;
+    left: 236px;
+    top: 74px;
+} 
+
+.appcontainer .ios {
+    position: absolute;
+    left: 388px;
+    top: 74px;
+} 
+
+.appcontainer .android .icon1 {
+    width: 125px;
+    height: 45px;
+    background: url(../images/google-play.png) no-repeat;
+    background-size: 82%;
+} 
+
+.appcontainer .android .icon2 {
+    margin-top: 5px;
+    width: 125px;
+    height: 125px;
+    line-height: 40px;
+    background: url(../images/qrcode.png) no-repeat;
+    background-size: 100px;
+} 
+
+.appcontainer .ios .icon1 {
+    width: 128px;
+    height: 45px;
+    background: url(../images/apple-store.png) no-repeat;
+    background-size: 80%;
+} 
+
+.appcontainer .ios .icon2 {
+    margin-top: 5px;
+    width: 125px;
+    height: 125px;
+    line-height: 40px;
+    background: url(../images/qrcode.png) no-repeat;
+    background-size: 100px;
+} 
+
+
+
+
+

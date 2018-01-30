@@ -1,0 +1,590 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from hely.club/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Jan 2018 03:24:41 GMT -->
+<head>
+	 
+    <!-- VERSION HTML 1.0 -->
+    <title>hely.club - Cổng game dân gian hấp dẫn nhất Việt Nam!</title>
+    <link id="page_favicon" href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <meta charset="utf-8">
+    <!--<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />-->
+    <meta name="theme-color" content="#a371d3">
+    <meta name="msapplication-navbutton-color" content="#a371d3">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimum-scale=0.3, user-scalable=no" />
+   
+    <meta property="og:site_name" content="Vua Đánh Bài" />
+    <meta property="og:title" content="hely.club - Vua Đánh Bài" />
+    <meta property="og:description" content="hely.club - cổng game đánh bài online có tỷ lệ thắng cao nhất, với đầy đủ các game đang hot hiện nay như: Tài xỉu, Poker, Bắn cá, Tiến lên miền nam, ba cây, tá lả, mậu binh... " />
+
+    <meta property="og:type" content="Game" />
+    <meta property="og:url" content="hely.club" />
+    <meta property="og:image" content="http://hely.club/logo-header.png" />
+
+    <link href="asset/css/slick.css" rel="stylesheet" />
+    <link href="asset/css/perfect-scrollbar.min.css" rel="stylesheet" />
+    <link href="asset/Content/css/game.css" rel="stylesheet"/>
+    <link href="asset/css/cardgames.min.css?v=1.5" rel="stylesheet"/>
+    <link href="asset/Content/css/reveal.css?v=1.5" rel="stylesheet" />
+    <link href="asset/css/treasure_portal.css?v=1.5" rel="stylesheet" />
+    <link href="asset/css/portal_all.css?v=1.5" rel="stylesheet" />
+    <style>
+        .login-header input[type=text],.login-header input[type=password]{
+            padding: 3px;
+        }
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+    <script src='https://cdn.firebase.com/v0/firebase.js'></script>
+</head>
+<body>
+     
+    
+    <div id="divLoading" class="resizeable spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+        <div class="bounce4"></div>
+        <div class="bounce5"></div>
+        <div class="clear"></div>
+       
+    </div>
+  
+     <div class="container">
+     <div id="wrap">
+
+
+     <div id="content" class="resizeable disable-tuch">
+
+     <div id="dvheader">
+         
+         <div class="logo">
+             <a href="javascript:;">
+                 <i class="ic-logo"></i>
+             </a>
+         </div>
+         <!-- end logo-->
+         <div class="social-login-header">
+             <ul>
+                  
+                 <li>
+                     <a id="btnFB" href="javascript:;">
+                         
+                     </a>
+                 </li>
+                 <li>
+                     <a id="btnGoo" href="javascript:;">
+                        
+                     </a>
+                 </li>
+             </ul>
+         </div>
+         <div class="login-header">
+             <ul>
+                 <li>
+                     <a href="https://hely.club/#games" id="btnregister" >Đăng ký</a>
+
+                 </li>
+                 <li>
+                     <div class="input">
+                         <span class="icon-user"></span>
+                         <input type="text" id="txtUserName" autofocus="" maxlength="20" placeholder="Tên đăng nhập" title="Tên đăng nhập" >
+                     </div>
+                 </li>
+                 <li class="password-header">
+                     <div class="input">
+                         <span class="icon-password"></span>
+                         <input id="txtpassword" type="password" maxlength="18" class="tooltip-tipsy" placeholder="Mật khẩu" title="Mật khẩu"> 
+                     </div>
+                 </li>
+                 <li>
+                     <a href="javascript:;" id="btnlogin">Đăng nhập</a>
+                     <a href="javascript:;" id="btnfogot"></a>
+                 </li>
+
+             </ul>
+         </div>
+         <!-- end login header-->
+         <div id="header" style="display: none">
+             <div id="clickRoomInfo" class="clickWrapper"></div>
+             <div id="clickWrapper1" class="clickWrapper"></div>
+             <div id="clickWrapper2" class="clickWrapper"></div>
+
+
+             <!-- user info header-->
+             <div class="user-info-header">
+                 <ul>
+                     <li class="avauser-header">
+                         <a href="javascript:Profile.openProfileFrame('profile');"><img></a>
+                     </li>
+                     <li>
+                         <p class="username-header" id="accountLabel">kkjkj888</p>
+                         <p class="vippoint-header" id="VP"><i></i>0/80
+                         </p>
+                         <p class="vipbar-header"><span style="width: 0%;"></span></p>
+                     </li>
+                 </ul>
+             </div>
+             <!-- end user info header-->
+             <!-- wallet info header-->
+             <div class="wallet-header">
+                 <div class="r-wallet-header">
+                     <a href="javascript:Profile.openProfileFrame('rechargewin');">Nạp</a>
+                     <i></i>
+                     <span id="helyLabel">0</span>    
+                 </div>
+                 <div class="c-wallet-header">
+                     <a href="javascript: Profile.openProfileFrame('rechargecoin');">Nạp</a>
+                     <i></i>
+                     <span id="coinLabel">0</span>    
+                 </div>
+             </div>
+
+             <!-- end wallet info header-->
+             <!-- menu header-->
+             <div class="menu-header">
+                 <ul class="menulist-header">
+                     <li>
+                          <div id="eventCoutDown" class="eventVippoint" title="Kho báu" onclick="Event.openEventFrameVip()">
+                             <span>
+                                 <i></i>
+                                
+                             </span>
+                         </div>
+                     </li>
+                     <li>
+                         <a href="javascript:Profile.openProfileFrame('security');" title="Bảo mật">
+                             <span></span>
+                             <i class="security"></i>
+                         </a>
+                     </li>
+                     <li>
+                         <a href="javascript:Profile.openProfileFrame('inbox');" title="Hộp thư">
+                             <span></span>
+                             <i class="inbox"></i>
+                         </a>
+                         <div class="notify-inbox-header"></div>
+                     </li>
+                     <li>
+                         <a href="javascript:Profile.openProfileFrame('cashout');" title="Cửa hàng">
+                             <span></span>
+                             <i class="cart"></i>
+                         </a>
+                     </li>
+                     <li>
+                         <a href="javascript:;" id="setting" title="Menu">
+                             <span></span>
+                             <i class="setting"></i>
+                         </a>
+                     </li>
+                 </ul>
+
+                 <div class="setting-board">
+                     <ul>
+                         <li>
+                             <a href="javascript:Profile.openProfileFrame('history');">Lịch sử giao dịch</a>
+                         </li>
+                         <li class="line-board"></li>
+                         <li>
+                             <a href="javascript:guide.ShowGuide('policy');">Điều khoản sử dụng</a>
+                         </li>
+                         <li>
+                             <a href="javascript:Profile.openProfileFrame('profile');">Hồ sơ</a>
+                         </li>
+                         <li>
+                             <a href="javascript:AccountInfo.logout();">Thoát</a>
+                         </li>
+                     </ul>
+
+                 </div>
+             </div>
+
+
+
+         </div>
+
+         <div class="giftcodebox" style="display: block; width: 80px; height: 150px">
+             <a id="giftcode" href="javascript:;" >
+                
+             </a>
+             <a href="javascript:AccountInfo.dowloadApp();" id="doanloadapp">
+                 
+             </a>
+         </div>
+     </div>
+    <div class="notification">
+         <marquee onmouseover="this.stop();" onmouseout="this.start();">
+             Siêu sự kiện  <span style="color: lime;font-weight: bold;">BUM 1</span> đã kết thúc. Xin chúc mừng  <span style="color: yellow;font-weight: bold;">dungvp :</span> Mazda CX5   <span  style="color: yellow;font-weight: bold;">cuongttkn18 :</span> SH 150  <span  style="color: yellow;font-weight: bold;">nangbg :</span>SH 125  <span  style="color: yellow;font-weight: bold;"> binhtinh110 :</span>iPhone X 256Gb <span  style="color: yellow;font-weight: bold;"> loitaitoi :</span>iPhone X 64Gb ... và những người chơi trong Top 100 nhận được Hely
+         </marquee>
+     </div>
+      
+     <div id="chosenGame" style="left: 0px">
+         <div class="boxgame-nav">
+             <a href="javascript:;" class="allgames active">TẤT CẢ</a>
+             <a href="javascript:;" class="mygames">yêu thích</a>
+             <a href="javascript:;" class="cardgames">Game bài</a>
+             <a href="javascript:;" class="slotgames">Slot</a>
+         </div>
+
+         <div class="list-container">
+             <div class="banner-event">
+             </div>
+
+             <div class="list-game">
+                 <div class="boxlist-game">
+                     <ul class="blockitem">
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+     <div id="lobby" class="lobby-game" style="display: none;">
+         <div id="roomloading" class="resizeable spinner">
+             <div class="bounce1"></div>
+             <div class="bounce2"></div>
+             <div class="bounce3"></div>
+             <div class="bounce4"></div>
+             <div class="bounce5"></div>
+             <div class="clear"></div>
+             <!--<p class="text_l" id="percentLoading"></p>-->
+         </div>
+
+         <div class="banchoi right-lobby">
+             <div class="topbar-lobbygame">
+                 <div class="menu-lobbygame">
+                     <ul>
+                         <li class="back-lobby">
+                             <a href="javascript:;">Về sảnh</a>
+                         </li>
+                         <li>
+                             <a href="javascript:;"><i class="ranking-game"></i></a>
+                         </li>
+                         <li>
+                             <a href="javascript:;"><i class="guide-game"></i></a>
+                         </li>
+                     </ul>
+                 </div>
+                 <div class="vip-table">
+                     <ul>
+                         <li id="btnGameVip" class="active">
+                             <a href="javascript:;">Bàn Vip</a>
+                         </li>
+                         <li id="btnGameNormal">
+                             <a href="javascript:;">bàn thường</a>
+                         </li>
+                     </ul>
+                 </div>
+                 <h3 id="gameTitle">Ba cây</h3>
+             </div>
+
+
+             <div id="listRoomType" class="table-game">
+                 <div class="slick-list">
+                     <div class="slick-slider listtable-game">
+                         <ul class="slick-slide vaoban1"></ul>
+                         <ul class="slick-slide vaoban2"></ul>
+
+                     </div>
+                 </div>
+
+             </div>
+             <div class="clear"></div>
+         </div>
+         <div class="top" style="display: none">
+             <div class="tit_top">
+                 <div style="background: #010f1d; width: 192px; -webkit-border-radius: 6px 6px 0 0; border-top-left-radius: 6px; float: left;">
+                     <a class="icon"></a>
+                     <svg width="150px" height="46px" version="1.1" xmlns="http://www.w3.org/2000/svg" style="margin-left: 45px; margin-top: -8px;">
+                         <g>
+                             <defs>
+                                 <linearGradient id="LinearGradientTop" gradientTransform="rotate(90)">
+                                     <stop offset="30%" stop-color="#f8f508"></stop>
+                                     <stop offset="100%" stop-color="#f69208"></stop>
+                                 </linearGradient>
+                             </defs>
+                             <text style="font-size: 16px; font-weight: bold;" x="0" y="34" fill="url(#LinearGradientTop)" stroke="none">BẢNG XẾP HẠNG</text>
+                         </g>
+                     </svg>
+                 </div>
+
+                 <div id="topvipId" class="active">Bàn VIP</div>
+                 <div id="topxuId">Bàn thường</div>
+
+
+
+
+
+             </div>
+             <table id="divLeaderboard" width="100%" border="0" cellspacing="0" cellpadding="0" class="top_bang">
+
+             </table>
+
+
+         </div>
+
+         <div id="chatbox" class="left-lobby">
+             <div class="menutab-left-lobby">
+                 <ul>
+                     <li data-control="tabbox1" class="active">
+                         <a href="javascript:;">Chat</a>
+                     </li>
+                 </ul>
+             </div>
+
+
+             <div class="content-left-lobby">
+                 <div class="boxchat active">
+                     <div class="roomchat">
+                         <ul>
+                             <li>
+                                 <a href="javascript:;" class="world">Thế giới</a>
+                             </li>
+                             <li>
+                                 <a href="javascript:;" class="lobby active">Phòng chờ</a>
+                             </li>
+                             <li>
+                                 <a href="javascript:;" class="room" style="display: none">Bàn</a>
+                             </li>
+                         </ul>
+                     </div>
+                     <div class="content"></div>
+
+                     <div class="formchat-left-lobby">
+                         <ul>
+                             <li>
+                                 
+                                 <input type="text" placeholder="Cần tối thiều 50.000 zdo" autocomplete="off" id="txtboxchatportal" disabled="disabled">
+                             </li>
+                             <li>
+                                 <a href="javascript:;" class="send-chat" id="btnchatportal">
+                                     <i class="icon-chat"></i>
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+
+                 </div>
+
+
+             </div>
+         </div>
+         <div class="clear"></div>
+
+     </div>
+
+     <div class="info-ingame">
+
+     </div>
+
+    <div class="btn-statistic-game" style="display: none;">
+        <a href="javascript:;" id="btn-statistic"></a>
+    </div>
+
+     <div class="show-statistic-game" >
+         
+     </div>
+
+
+     <div class="rightmenu-ingame" style="zoom: 1; display: none;">
+         <ul>
+             <li><a href="javascript:;" id="btn-back"></a></li>
+            
+         </ul>
+     </div>
+
+
+     </div>
+
+     <div class="parentCanvas" style="position: absolute; width: 1200px; height: 675px; top: 0px;">
+         <div id="canvasWrap" class="disable-tuch">
+             <canvas id="buyinCanvas" width="1200" height="675"></canvas>
+             <canvas id="easelCanvas" width="1200" height="675" style="display: none">
+                 Trình duyệt của bạn không hỗ trợ HTML5. Tải trình duyệt mới về để chơi nhé.
+             </canvas>
+         </div>
+     </div>
+
+     <div id="effectGamplay" class="resizeable disable-tuch" style="position: absolute; top: 0px;">
+         
+     </div>
+
+     <div class="resizeable disable-tuch" id="wrapGame">
+
+         <div id="menuButton" style="display: none;">
+             <a id="btn-menu-game" href="javascript:;" class="disabled" >
+                 <i></i>
+             </a>
+             <a id="btn-chat" href="javascript:;" style="left: 72px">
+                 <i></i>
+             </a>
+             <a id="chip_button" href="javascript:;" style="left: 145px;top:5px; display: none" class="disabled">
+                 <i></i>
+             </a>
+
+         </div>
+         <div id="gameButton">
+             
+         </div>
+         <div id="chat" class="left-lobby">
+             <div class="menutab-left-lobby">
+                 <ul>
+                     <li data-control="tabbox1" class="active">
+                         <a href="javascript:;">Chat</a>
+                     </li>
+                 </ul>
+             </div>
+             <div class="content-left-lobby">
+                 <div class="boxchat">
+                     <div class="roomchat">
+                         <ul>
+                             <li>
+                                 <a href="javascript:;" class="world">Thế giới</a>
+                             </li>
+                             <li>
+                                 <a href="javascript:;" class="lobby active">Phòng chờ</a>
+                             </li>
+                             <li>
+                                 <a href="javascript:;" class="room">Bàn</a>
+                             </li>
+                         </ul>
+                     </div>
+                     <div id="chat-content"></div>
+                     <div class="formchat-left-lobby">
+                         <ul>
+                             <li>
+                                  
+                                 <input type="text" placeholder="Nhập nội dung chat..." id="txtboxchatingame" maxlength="100" autocomplete="off">
+                             </li>
+                             <li>
+                                 <a href="javascript:;" class="send-chat" id="btnchatingame">
+                                     <i class="icon-chat"></i>
+                                 </a>
+                                 <a href="javascript:;" id="popemoticon" style="left: 30px;">
+                                     <i class="icon-emoticon"></i>
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+
+                 </div>
+
+
+                 <ul class="pre-text line1"></ul>
+                 <ul class="emoticon line1"></ul>
+
+
+
+
+
+
+             </div>
+
+         </div>
+         <div class="divTreasure"></div>
+     </div>
+     </div>
+
+     <div>
+         <div class="resizeable popup">
+             <div class="modal-dialog">
+
+
+             </div>
+         </div>
+          
+         <div class="bgOverlay"></div>
+     </div>
+
+
+
+   
+    </div>
+    <div class="footer resizeable" style="display: none">
+        
+        <!--end listgame footer-->
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="http://helyclub.net/" target="tintuc"><i class="notifi"></i>Tin tức</a>
+                </li>
+                <li>
+                    <a href="javascript: AccountInfo.bindAgency();"><i class="partner"></i> Đại lý</a>
+                </li>
+                <li>
+                    <a href="javascript:guide.ShowGuide('policy');"><i class="guide"></i>Hướng dẫn</a>
+                </li>
+                <li>
+                    <a href="javascript:AccountInfo.dowloadApp();" ><i class="download"></i> Tải Hely</a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/helyclub.huyenthoaitrolai/" target="fanpage"><i class="fanpage"></i> Fanpage</a>
+                </li>
+                <li>
+                    <a href="javascript:;"><i class="help"></i>19002288</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <script src="asset/js/json2.min.js"></script>
+    <script src="asset/js/jquery-1.10.2.min.js"></script>
+    <script src="asset/js/jquery-ui-1.10.3.custom.min.js" ></script>
+    <script src="asset/js/jquery.signalR-2.2.0.min.js" ></script>
+    <script src="asset/js/jquery.ba-hashchange.min.js"></script>
+    <script src="asset/js/jquery.slimscroll.min.js"> </script>
+    <script src="asset/js/jquery.validate.min.js" ></script>
+    <script src="asset/js/perfect-scrollbar.jquery.min.js"  ></script>
+    <script src="asset/js/jquery.nstSlider.min.js"  ></script>
+    <script src="asset/js/wz_tooltip.min.js"></script>  
+    <script src="asset/js/md5.min.js"  ></script>
+    <script src="asset/js/navigator.js"  ></script>
+    
+
+
+    <script src="asset/js/jquery-jtemplates.js" defer="defer"></script>
+    <script src="asset/js/modernizr-2.6.2.min.js" defer="defer"></script>
+    <script src="asset/js/detectizr.min.js" defer="defer"></script>
+    <script src="asset/js/detect-zoom.min.js"></script>
+  
+    <script src="asset/js/preloadjs-0.6.1.js" defer="defer"></script>
+    <script src="asset/js/easeljs-0.8.1.js" defer="defer"></script>
+    <script src="asset/js/tweenjs-0.6.1.js" defer="defer"></script>
+    <script src="asset/js/soundjs-0.5.0.min.js" defer="defer"></script>
+    <script src="asset/js/ColorMatrix-Filter.min.js" defer="defer"></script>
+    <script src="asset/js/jquery.jemotion.js?v=2" defer="defer"></script>
+    <script src="asset/js/jquery.reveal.js" defer="defer"></script>
+    <script src="asset/js/slick.min.js" defer="defer"></script>
+
+    <script type="text/javascript" src="asset/js/config.js?v=1.11" defer="defer"></script>
+
+    <script type="text/javascript" src="asset/js/preloader.js?v=1.6" defer="defer"></script>
+    <script type="text/javascript" src="asset/js/enums.js?v=1.6" defer="defer"></script>
+    <script type="text/javascript" src="asset/js/resizeWindows.js?v=1.6" defer="defer"></script>
+    <script type="text/javascript" src="asset/js/timer.js?v=1.6" defer="defer"></script>
+    <script type="text/javascript" src="asset/js/popup.js?v=1.6" defer="defer"></script>
+    <script type="text/javascript" src="asset/js/button.js?v=1.6" defer="defer"></script>
+    <script type="text/javascript" src="asset/js/tabContent.js?v=1.6" defer="defer"></script>
+    <script type="text/javascript" src="asset/js/notify.js?v=1.6" defer="defer"></script>
+    <script type="text/javascript" src="asset/js/commonHub.js?v=1.6" defer="defer"></script>
+
+    <script type="text/javascript" src="asset/js/treasure.js?v=1.6" defer="defer"></script>
+
+    <script type="text/javascript" src="asset/js/accountInfo.js?v=1.667" defer="defer"></script>
+    <script type="text/javascript" src="asset/js/chosenGame.js?v=1.6" defer="defer"></script>
+    <script type="text/javascript" src="asset/js/lobby.js?v=1.6" defer="defer"></script>
+    <script type="text/javascript" src="asset/js/profile.js?v=1.6" defer="defer"></script>
+
+    <script type="text/javascript" src="asset/js/setting.js?v=1.7" defer="defer"></script>
+    <script type="text/javascript" src="asset/js/guide.js?v=1.911" defer="defer"></script>
+    <script type="text/javascript" src="asset/js/Event.js?v=1.11" defer="defer"></script>
+    <script type="text/javascript" src="asset/js/App.js?v=1.6"  defer="defer"></script>
+    <script src="asset/js/commongame.js"></script><script src="https://cdn.rawgit.com/JDMcKinstry/JavaScriptDateFormat/master/Date.format.min.js"></script>
+    
+
+</body>
+
+</html>

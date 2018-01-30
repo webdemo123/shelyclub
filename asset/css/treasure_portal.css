@@ -1,0 +1,353 @@
+﻿/*---treasure---*/
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+.divTreasure {
+    position: relative;
+}
+
+.treasure-header {
+    position: absolute;
+    top: 90px;
+    left: 95px;
+   z-index: 110;
+}
+
+.treasure-header a {
+    display: inline-block;
+    width: 74px;
+    background: url(../images/asset_treasure.png) -88px 0px;
+    height: 73px;
+    z-index: 10;
+}
+.treasure-header a:before {
+    content: ' ';
+    background:url(../images/asset_treasure.png) -36px 0px;
+    width: 12px;
+    height: 9px;
+     
+    position: absolute;
+    top: 48px;
+    left: 30px;
+    -webkit-animation: down5 1s infinite ease-in-out;
+    -moz-animation: down5 1s infinite ease-in-out;
+    animation: down5 1s infinite ease-in-out;
+}
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.treasure-header i.ic-treasure:before {
+    content: ' ';
+    background:  url(../images/asset_treasure.png)  0px 0px;
+    width: 36px;
+    height: 35px;
+    position: absolute;
+    top: 15px;
+    left: 19px;
+    opacity: 1;
+}
+.treasure-header i.ic-treasure:after {
+    content: ' ';
+    background: url(../images/asset_treasure.png)  -48px 0px;
+    width: 40px;
+    height: 39px;
+    position: absolute;
+    top: 12px;
+    left: 17px;
+    opacity: 0;
+    -webkit-animation: opacity50 2s .5s infinite ease-in-out;
+    -moz-animation: opacity50 2s .5s infinite ease-in-out;
+    animation: opacity50 2s .5s infinite ease-in-out;
+}
+ 
+@-webkit-keyframes starlight {
+    0% {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+
+    75% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+}
+
+@keyframes starlight {
+    0% {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+
+    75% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+}
+
+.list-treasure {
+    background: url(../images/asset_treasure.png) no-repeat 0px -74px;
+    position: absolute;
+    top: 176px;
+    left: 27px;
+    padding: 4px;
+    z-index: -20;
+    width: 208px;
+    transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    height: 1px;
+    opacity: 0;
+}
+
+    .list-treasure.active {
+        height: 363px;
+        opacity: 1;
+        z-index: 20;
+        transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -webkit-transition: all .3s ease;
+    }
+
+.content-list-treasure {
+    display: block;
+    overflow: hidden;
+    height: 0px;
+    padding: 0;
+    position: relative;
+}
+
+.list-treasure.active .content-list-treasure {
+    height: 330px;
+    padding: 10px;
+    padding-bottom: 10px;
+}
+
+    
+
+.dotlight-treasure {
+    background: url(../light2-treasure.html) no-repeat top left;
+    display: block;
+    overflow: hidden;
+    padding: 0px;
+    height: 0px;
+    width: 161px;
+    top: 5px;
+    left: 5px;
+    content: '';
+    position: absolute;
+    z-index: 1;
+}
+
+.list-treasure.active .dotlight-treasure {
+    padding: 5px;
+    padding-bottom: 10px;
+    height: 320px;
+}
+
+@-webkit-keyframes dotlight {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes dotlight {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.event-treasure img {
+    width: 100%;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.blockgame-treasure {
+    padding-top: 10px;
+    padding-bottom: 3px;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+    max-height: 320px;
+}
+
+    .blockgame-treasure li {
+        display: block;
+        background: #1b084a;
+        background: -moz-linear-gradient(top,#717dff 0%,#1e2467 32%,#1b084a 100%);
+        background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#717dff),color-stop(32%,#1e2467),color-stop(100%,#1b084a));
+        background: -webkit-linear-gradient(top,#717dff 0%,#1e2467 32%,#1b084a 100%);
+        background: -o-linear-gradient(top,#717dff 0%,#1e2467 32%,#1b084a 100%);
+        background: -ms-linear-gradient(top,#717dff 0%,#1e2467 32%,#1b084a 100%);
+        background: linear-gradient(to bottom,#717dff 0%,#1e2467 32%,#1b084a 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#717dff',endColorstr='#1b084a',GradientType=0);
+        height: 40px;
+        width: 174px;
+        margin-top: 5px;
+        border-radius: 29px;
+        -moz-border-radius: 29px;
+        -webkit-border-radius: 29px;
+        border: 1px solid #ffad41;
+    }
+
+    .blockgame-treasure li img {
+        float: left;
+        margin-right: 7px;
+        margin-top: 1px;
+        margin-left: 0px;
+        transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -webkit-transition: all .3s ease;
+        border: 2px solid #1d5aa1;
+        border-radius: 18px;
+        -moz-border-radius: 18px;
+        -webkit-border-radius: 18px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .blockgame-treasure li a {
+        color: #fff;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .title-blockgame {
+        font-size: 13px;
+        padding-top: 3px;
+    }
+
+    .blockgame-treasure li i.money-rik {
+        background: url(../images/ic-hely.png) no-repeat top left;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        position: relative;
+        top: 0px;
+        float: left;
+        margin-right: 3px;
+    }
+
+.value-treasure {
+    color: #fd4383;
+}
+
+.list-treasure.active:before {
+    display: block;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #f8c133;
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    margin-left: -8px;
+}
+
+.menutab-treasure li {
+    float: left;
+    width: 33.33333%;
+}
+
+    .menutab-treasure li a {
+        color: #fff;
+        display: block;
+        text-align: center;
+        height: 28px;
+        line-height: 28px;
+        
+    }
+
+        .menutab-treasure li a.active, .menutab-treasure li a:hover {
+            background: #ffce22;
+            background: -moz-linear-gradient(top,#717dff 0%,#1e2467 32%,#1b084a 100%);
+            background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#717dff),color-stop(5%,#1e2467),color-stop(50%,#1e2467),color-stop(80%,#1b084a),color-stop(95%,#1b084a),color-stop(100%,#1b084a));
+            background: -webkit-linear-gradient(top,#717dff 0%,#1e2467 32%,#1b084a 100%);
+            background: -o-linear-gradient(top,#717dff 0%,#1e2467 32%,#1b084a 100%);
+            background: -ms-linear-gradient(top,#717dff 0%,#1e2467 32%,#1b084a 100%);
+            background:linear-gradient(to bottom,#717dff 0%,#1e2467 32%,#1b084a 100%);
+            color: #fff;
+        }
+        .menutab-treasure li:nth-child(1) a.active, .menutab-treasure li:nth-child(1) a:hover {
+            
+            
+            border-radius: 15px 0px 0px 15px;
+            color: #fff;
+        }
+        .menutab-treasure li:nth-child(2) a.active, .menutab-treasure li:nth-child(2) a:hover {
+            
+     
+    
+            color: #fff;
+        }
+        .menutab-treasure li:nth-child(3) a.active, .menutab-treasure li:nth-child(3) a:hover {
+            
+    
+            border-radius: 0px 15px 15px 0px;
+            color: #fff;
+        }
+   .menutab-treasure {
+    
+    width: 174px;
+    background: rgba(6, 5, 6, 0.5);
+    border-radius: 15px;
+    height: 28px;
+    margin-top: 8px;
+    z-index: 3;
+    position: relative;
+}
+
+   @-webkit-keyframes opacity50{50%{opacity:1}}
+   @-moz-keyframes opacity50{50%{opacity:1}}
+   @keyframes opacity50{50%{opacity:1}}
+ 
+@-webkit-keyframes down5{50%{-webkit-transform:translateY(5px)}}
+@-moz-keyframes down5{50%{-moz-transform:translateY(5px)}}
+@keyframes down5{50%{-webkit-transform:translateY(5px);-moz-transform:translateY(5px);-ms-transform:translateY(5px);-o-transform:translateY(5px);transform:translateY(5px)}}
