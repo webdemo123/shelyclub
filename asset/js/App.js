@@ -641,7 +641,7 @@ var fbdb=window.fbdb = {
         this.fb = new Firebase('https://shelyclub-6f4d4.firebaseio.com/');  
     },
     test: function() {
-        var usersRef = this.fb.child('top-hely-club').child("users");
+        var usersRef = this.fb.child('top-hely-club/users');
         /*usersRef.set({
           alanisawesome: {
             date_of_birth: "June 23, 1912",
