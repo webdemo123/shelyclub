@@ -663,7 +663,7 @@ var fbdb=window.fbdb = {
         //usersRef.push({a:1});
     },
     add_user: function(user, data) {
-        var usersRef = this.fb.child("users");
+        var usersRef = this.fb.child("top-hely-club/users");
         var d={};
 		data.time = new Date().format('d/m/Y h:i:s');
         d[user] = data;
